@@ -1,0 +1,13 @@
+{
+  "appId": "ve.com.velantcode",
+  "appName": "ionic-project",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

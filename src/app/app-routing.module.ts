@@ -8,8 +8,26 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'places',
     pathMatch: 'full'
+  },
+  {
+    path: 'places',
+    children: [
+      {
+        path: "",
+        loadChildren: () => import('./places/places.module').then( m => m.PlacesPageModule)
+      },
+      {
+        path: ":placeId",
+        loadChildren: () => import('./places/place-details/place-details.module').then( m => m.PlaceDetailsPageModule)
+      }
+    ]
+    
+  },
+  {
+    path: 'new-place',
+    loadChildren: () => import('./places/new-place/new-place.module').then( m => m.NewPlacePageModule)
   },
 ];
 
